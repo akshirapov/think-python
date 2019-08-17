@@ -1,41 +1,91 @@
 
-import turtle
+"""
+This module contains a code example related to
+
+Think Python, 2nd Edition
+by Allen Downey
+http://thinkpython2.com
+"""
+
 import math
+import turtle
+
+
+def polyline(t, n, length, angle):
+    """
+    Draws n line segments.
+
+    :param t: Turtle object
+    :param n: number of line segments
+    :param length: length of each segments
+    :param angle: degrees between segments
+    """
+
+    for i in range(n):
+        t.fd(length)
+        t.lt(angle)
 
 
 def square(t, length):
-    for i in range(4):
-        t.fd(length)
-        t.lt(90)
+    """
+    Draws a square with sides of the given length
+    Returns the Turtle to the starting position and location.
+
+    :param t: Turtle object
+    :param length: length of each side
+    """
+
+    polyline(t, 4, length, 90)
 
 
-def polygon(t, length, n):
-    for i in range(n):
-        t.fd(length)
-        t.lt(360/n)
+def polygon(t, n, length):
+    """
+    Draws a polygon with n sides
 
+    :param t: Turtle object
+    :param length: length of each side
+    :param n: number of sides
+    """
 
-def circle(t, r):
-    c = 2 * math.pi * r
-    length = 10
-    n = int(c/length)
-    polygon(t, length, n)
+    angle = 360 / n
+    polyline(t, n, length, angle)
 
 
 def arc(t, r, angle):
-    c = 2 * math.pi * r
-    length = 10
-    n = int(c/length)
-    for i in range(int(n*angle/360)):
-        t.fd(length)
-        t.lt(360/n)
+    """
+    Draws an arc with the given radius and angle
+
+    :param t: Turtle object
+    :param r: radius of the arc
+    :param angle: angle subtended by the arc, in degrees
+    """
+
+    arc_length = 2 * math.pi * r * abs(angle) / 360
+    n = int(arc_length / 4) + 3
+    step_length = arc_length / n
+    step_angle = float(angle) / n
+
+    polyline(t, n, step_length, step_angle)
 
 
-bob = turtle.Turtle()
+def circle(t, r):
+    """
+    Draws a circle with the given radius
 
-square(bob, 100)
-polygon(bob, 100, 10)
-circle(bob, 100)
-arc(bob, 100, 270)
+    :param t: Turtle object
+    :param r: radius of the circle
+    """
 
-turtle.mainloop()
+    arc(t, r, 360)
+
+
+if __name__ == '__main__':
+    bob = turtle.Turtle()
+
+    square(bob, 100)
+    polygon(bob, 10, 100)
+    arc(bob, 100, 30)
+    circle(bob, 100)
+
+    # wait for the user to close the window
+    turtle.mainloop()
