@@ -1,6 +1,6 @@
 
 """
-This module contains a code example related to
+This module contains a code for Exercise 1 related to ch.4.12 of
 
 Think Python, 2nd Edition
 by Allen Downey
