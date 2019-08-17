@@ -21,6 +21,9 @@ def polyline(t, n, length, angle):
     :param angle: degrees between segments
     """
 
+    # stack diagram
+    print(f"polyline: [t -> '{t}'; n -> '{n}'; length -> '{length}'; angle -> '{angle}']")
+
     for i in range(n):
         t.fd(length)
         t.lt(angle)
@@ -60,6 +63,9 @@ def arc(t, r, angle):
     :param angle: angle subtended by the arc, in degrees
     """
 
+    # stack diagram
+    print(f"arc: [t -> '{t}'; r -> '{r}'; angle -> '{angle}']")
+
     arc_length = 2 * math.pi * r * abs(angle) / 360
     n = int(arc_length / 4) + 3
     step_length = arc_length / n
@@ -76,15 +82,18 @@ def circle(t, r):
     :param r: radius of the circle
     """
 
+    # stack diagram
+    print(f"circle: [t -> '{t}'; r -> '{r}']")
+
     arc(t, r, 360)
 
 
 if __name__ == '__main__':
     bob = turtle.Turtle()
 
-    square(bob, 100)
-    polygon(bob, 10, 100)
-    arc(bob, 100, 30)
+    # square(bob, 100)
+    # polygon(bob, 10, 100)
+    # arc(bob, 100, 30)
     circle(bob, 100)
 
     # wait for the user to close the window
