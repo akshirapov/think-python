@@ -22,7 +22,7 @@ def polyline(t, n, length, angle):
     """
 
     # stack diagram
-    print(f"polyline: [t -> '{t}'; n -> '{n}'; length -> '{length}'; angle -> '{angle}']")
+    print(f'[polyline]: t->{t}, n->{n}, length->{length}, angle->{angle}')
 
     for i in range(n):
         t.fd(length)
@@ -64,7 +64,7 @@ def arc(t, r, angle):
     """
 
     # stack diagram
-    print(f"arc: [t -> '{t}'; r -> '{r}'; angle -> '{angle}']")
+    print(f'[arc]: t->{t}, r->{r}, angle->{angle}')
 
     arc_length = 2 * math.pi * r * abs(angle) / 360
     n = int(arc_length / 4) + 3
@@ -83,7 +83,7 @@ def circle(t, r):
     """
 
     # stack diagram
-    print(f"circle: [t -> '{t}'; r -> '{r}']")
+    print(f'[circle]: t->{t}, r->{r}')
 
     arc(t, r, 360)
 

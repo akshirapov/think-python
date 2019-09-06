@@ -10,7 +10,7 @@ import time
 
 
 if __name__ == '__main__':
-    """Converts the current time to a time of days, hours, minutes and 
+    """Converts the current time to a time of days, hours, minutes and
     seconds from the epoch.
     """
 
@@ -21,4 +21,8 @@ if __name__ == '__main__':
     seconds = int(now % 60)
     days = int(hours // 24)
 
-    print(f'{days} days {hours-24*days} hours {minutes} minutes {seconds} seconds since the epoch.')
+    print(f'{days} days '
+          f'{hours-24*days} hours '
+          f'{minutes} minutes '
+          f'{seconds} seconds '
+          f'since the epoch.')

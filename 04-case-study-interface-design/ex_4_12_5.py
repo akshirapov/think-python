@@ -6,7 +6,6 @@ http://thinkpython2.com
 """
 
 import math
-import time
 import turtle
 
 
