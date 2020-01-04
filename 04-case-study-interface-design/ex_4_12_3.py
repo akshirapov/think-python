@@ -60,4 +60,4 @@ if __name__ == '__main__':
 
     polygon(bob, 7, 100)
 
-    turtle.mainloop()
+    turtle.Screen().mainloop()

@@ -23,7 +23,7 @@ def polyline(t, n, length, angle):
     :param angle: degrees between segments
     """
 
-    for i in range(n):
+    for _ in range(n):
         t.fd(length)
         t.lt(angle)
 
@@ -95,7 +95,7 @@ def main():
     draw_rect(bob, box)
     draw_circle(bob, circle)
 
-    turtle.mainloop()
+    turtle.Screen().mainloop()
 
 
 if __name__ == '__main__':

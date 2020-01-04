@@ -97,4 +97,4 @@ if __name__ == '__main__':
     circle(bob, 100)
 
     # wait for the user to close the window
-    turtle.mainloop()
+    turtle.Screen().mainloop()

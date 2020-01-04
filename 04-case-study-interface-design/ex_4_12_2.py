@@ -81,4 +81,4 @@ if __name__ == '__main__':
     bob = turtle.Turtle()
     flower(bob, 10, 100)
 
-    turtle.mainloop()
+    turtle.Screen().mainloop()

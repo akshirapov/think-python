@@ -75,7 +75,7 @@ class PokerHand(Hand):
         return self.check_sets(2, 2)
 
     def has_three_of_kind(self):
-        """Returns True if the hand has three cards with the same rank, False otherwise."""
+        """Returns True if the hand has three cards with the same rank."""
         return self.check_sets(3)
 
     def has_straight(self):
@@ -121,7 +121,7 @@ class PokerHand(Hand):
         return self.check_sets(3, 2)
 
     def has_four_of_kind(self):
-        """Returns True if the hand has four cards with the same rank, False otherwise."""
+        """Returns True if the hand has four cards with the same rank."""
         self.check_sets(4)
 
     def has_straight_flush(self):
@@ -168,7 +168,7 @@ class PokerDeck(Deck):
          :param num_card: number of cards per hand
          """
         hands = []
-        for h in range(num_hand):
+        for _ in range(num_hand):
             hand = PokerHand()
             self.move_cards(hand, num_card)
             hand.classify()

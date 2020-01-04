@@ -114,4 +114,4 @@ if __name__ == '__main__':
     # quadratic_koch(bob, 4*LENGTH, 3)
 
     bob.hideturtle()
-    turtle.mainloop()
+    turtle.Screen().mainloop()

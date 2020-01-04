@@ -12,7 +12,6 @@ import string
 import random
 
 from ex_13_1_2 import skip_header
-from pprint import pprint
 
 
 def process_word(word: str):

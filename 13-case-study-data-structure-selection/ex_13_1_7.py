@@ -12,7 +12,17 @@ import random
 import bisect
 
 from ex_13_1_2 import process_file
-from ex_10_15_2 import cumsum
+
+
+def cumsum(numbers: list):
+    """Returns list where the ith element is the sum of the first i+1."""
+
+    result = []
+
+    for i in range(0, len(numbers)):
+        result.append(sum(numbers[:i+1]))
+
+    return result
 
 
 def random_word(wb: dict):

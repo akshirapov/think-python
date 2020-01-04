@@ -73,7 +73,7 @@ class Deck:
         :param hand: destination Hand object
         :param num: number of cards to move
         """
-        for i in range(num):
+        for _ in range(num):
             hand.add_card(self.pop_card())
 
     def deal_hands(self, num_hand=0, num_card=0):

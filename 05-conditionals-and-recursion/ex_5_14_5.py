@@ -43,4 +43,4 @@ if __name__ == '__main__':
     bob = turtle.Turtle()
     bob.lt(90)  # for clarity
     draw(bob, 20, 5)
-    turtle.mainloop()
+    turtle.Screen().mainloop()

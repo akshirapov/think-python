@@ -19,7 +19,7 @@ class Ping(PingPongParent):
 
 class Pong(PingPongParent):
     def __init__(self, pings=None):
-        if pings in None:
+        if pings is None:
             self.pings = []
         else:
             self.pings = pings

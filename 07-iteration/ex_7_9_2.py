@@ -8,9 +8,6 @@ http://thinkpython2.com
 """
 
 
-import math
-
-
 def eval_loop():
     """ Evaluates the given expressions."""
 

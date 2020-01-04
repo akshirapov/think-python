@@ -60,4 +60,4 @@ if __name__ == '__main__':
     draw_a(bob, 20)
 
     bob.hideturtle()
-    turtle.mainloop()
+    turtle.Screen().mainloop()

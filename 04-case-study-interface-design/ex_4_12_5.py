@@ -82,4 +82,4 @@ if __name__ == '__main__':
     fib_spiral(bob, 15)
 
     bob.hideturtle()
-    turtle.mainloop()
+    turtle.Screen().mainloop()
